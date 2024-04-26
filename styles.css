@@ -1,34 +1,95 @@
-html {
-    font-family: "Fira Sans", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 14px;
+:root {
+    --main: #58cbec;
+    --accent: #34a7d9;
+    --light: #a2dff6;
 }
-  
-section#about-me {
+
+body {
+    margin: 0;
+}
+
+html {
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: var(--light);
+    border-bottom: 5px solid var(--accent);
+    margin-bottom: 25px;
+}
+
+nav > header {
+    width: 40%;
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+}
+
+/* Create glowing effect when selecting link */
+@keyframes select {
+    0%   {box-shadow: 0 0 5px 5px var(--main);}
+    25%  {box-shadow: 0 0 5px 7.5px var(--main);}
+    50%  {box-shadow: 0 0 5px 10px var(--main);}
+    75%  {box-shadow: 0 0 5px 12.5px var(--main);}
+    100% {box-shadow: 0 0 5px 15px var(--main);}
+}
+
+nav > .links > a {
+    margin-right: 50px;
+    text-decoration: none;
+    color: var(--accent);
+    text-align: center;
+}
+
+nav > .links > a:hover {
+    color: #fff;
+    animation-name: select;
+    animation-duration: 100ms;
+}
+
+section > header {
+  font-size: 36px;
+  font-weight: 600;
+  color: #54C1EF;
+  margin-top: 100px;
+}
+
+section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 50px;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
 }
-  
+
 div#profile {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin-bottom: 25px;
 }
-  
+
 div#profile > img {
-    height: 128px;
-    width: 128px;
+    height: 200px;
+    width: 200px;
     margin: auto 25px;
-}
-  
-header {
-  font-size: 18px;
-  font-weight: 600;
-  color: #54C1EF;
 }
 
 .accent {
@@ -37,42 +98,72 @@ header {
 }
 
 .project-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(250px, 1fr));
-    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
 }
 
 .project {
-    width: 350px;
-    height: 450px;
-    box-shadow: 7.5px 7.5px #54C1EF;
+    width: 900px;
+    height: 300px;
+    box-shadow: 7.5px 7.5px #34a7d9;
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .project > img {
-    height: 70%;
+    height: 300px;
+    width: 300px;
     object-fit: cover;
 }
 
 .project-desc {
-    height: 30%;
-    background-color: #A0D8EE;
-    text-align: center;
-    padding: 5px;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
-.desc {
+.project-desc > .title {
+    width: 580px;
+    height: 55px;
+    font-size: 24px;
+    background-color: #54C1EF;
+    text-align: center;
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.project-desc > .title > .place {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.project-desc > .desc {
+    width: 580px;
+    height: 180px;
+    background-color: #A0D8EE;
+    padding: 10px 10px;
+    margin: 0;
+}
+
+.project-desc > .links {
     font-size: 12px;
+    width: 580px;
+    height: 30px;
+    background-color: #111;
+    padding: 10px 10px;
+    margin: 0;
 }
 
 .title {
     font-weight: 800;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1000px) {
     div#profile {
         display: flex;
         flex-direction: column;
