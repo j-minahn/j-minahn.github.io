@@ -264,4 +264,8 @@ div#profile > img {
         padding: 10px 10px;
         margin: 0;
     }
+
+    .project-desc > .title > .long {
+        font-size: 20px;
+    }
 }
