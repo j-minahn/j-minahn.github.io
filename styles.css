@@ -163,6 +163,7 @@ div#profile > img {
     background-color: var(--light);
     padding: 10px 10px;
     margin: 0;
+    font-size: 16px;
 }
 
 .project-desc > .links {
