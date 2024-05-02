@@ -45,19 +45,29 @@ nav > header {
 
 /* Create glowing effect when selecting link */
 @keyframes select {
-    0%   {box-shadow: 0 0 5px 5px var(--main);}
-    25%  {box-shadow: 0 0 5px 7.5px var(--main);}
-    50%  {box-shadow: 0 0 5px 10px var(--main);}
-    75%  {box-shadow: 0 0 5px 12.5px var(--main);}
-    100% {box-shadow: 0 0 5px 15px var(--main);}
+    0%   {border-radius: 5%;
+          box-shadow: 0 0 5px 5px var(--main);}
+    25%  {border-radius: 5%;
+          box-shadow: 0 0 5px 7.5px var(--main);}
+    50%  {border-radius: 5%;
+          box-shadow: 0 0 5px 10px var(--main);}
+    75%  {border-radius: 5%;
+         box-shadow: 0 0 5px 12.5px var(--main);}
+    100% {border-radius: 5%;
+          box-shadow: 0 0 5px 15px var(--main);}
 }
 
-@keyframes select2 {
-    0%   {box-shadow: 0 0 5px 5px var(--main);}
-    25%  {box-shadow: 0 0 5px 7.5px var(--main);}
-    50%  {box-shadow: 0 0 5px 10px var(--main);}
-    75%  {box-shadow: 0 0 5px 12.5px var(--main);}
-    100% {box-shadow: 0 0 5px 15px var(--main);}
+@keyframes select3 {
+    0%   {border-radius: 50%;
+          box-shadow: 0 0 5px 5px var(--main);}
+    25%  {border-radius: 50%;
+          box-shadow: 0 0 5px 7.5px var(--main);}
+    50%  {border-radius: 50%;
+          box-shadow: 0 0 5px 10px var(--main);}
+    75%  {border-radius: 50%;
+          box-shadow: 0 0 5px 12.5px var(--main);}
+    100% {border-radius: 50%;
+          box-shadow: 0 0 5px 15px var(--main);}
 }
 
 nav > .links > a {
@@ -159,20 +169,11 @@ div#profile > img {
 
 .project-desc > .desc {
     width: 580px;
-    height: 190px;
+    height: 230px;
     background-color: var(--light);
     padding: 10px 10px;
     margin: 0;
     font-size: 16px;
-}
-
-.project-desc > .links {
-    font-size: 14px;
-    width: 580px;
-    height: 20px;
-    background-color: #fff;
-    padding: 10px 10px;
-    margin: 0;
 }
 
 .title {
@@ -191,8 +192,13 @@ div#profile > img {
     margin: 0 30px;
 }
 
-.contacts > a > img:hover {
+.contacts > .square > img:hover {
     animation-name: select2;
+    animation-duration: 100ms;
+}
+
+.contacts > .circle > img:hover {
+    animation-name: select3;
     animation-duration: 100ms;
 }
 
@@ -249,18 +255,9 @@ div#profile > img {
     }
 
     .project-desc > .desc {
-        height: 200px;
+        height: 240px;
         width: 480px;
         background-color: var(--light);
-        padding: 10px 10px;
-        margin: 0;
-    }
-
-    .project-desc > .links {
-        font-size: 14px;
-        height: 40px;
-        width: 480px;
-        background-color: #fff;
         padding: 10px 10px;
         margin: 0;
     }
