@@ -45,6 +45,14 @@ nav > header {
 
 /* Create glowing effect when selecting link */
 @keyframes select {
+    0%   {box-shadow: 0 0 5px 5px var(--main);}
+    25%  {box-shadow: 0 0 5px 7.5px var(--main);}
+    50%  {box-shadow: 0 0 5px 10px var(--main);}
+    75%  {box-shadow: 0 0 5px 12.5px var(--main);}
+    100% {box-shadow: 0 0 5px 15px var(--main);}
+}
+
+@keyframes select2 {
     0%   {border-radius: 5%;
           box-shadow: 0 0 5px 5px var(--main);}
     25%  {border-radius: 5%;
