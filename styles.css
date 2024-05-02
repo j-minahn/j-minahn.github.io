@@ -263,7 +263,7 @@ div#profile > img {
     }
 
     .project-desc > .desc {
-        height: 240px;
+        height: 260px;
         width: 480px;
         background-color: var(--light);
         padding: 10px 10px;
